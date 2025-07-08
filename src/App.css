@@ -1,38 +1,117 @@
-.App {
+/* App.css */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #f8fafc, #e0f7fa);
+  color: #333;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  color: #0d47a1;
+  font-weight: 700;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sliders {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.slider-wrapper {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.slider-label {
+  display: block;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+.slider {
+  width: 100%;
+}
+
+.slider-value {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 0.25rem;
+}
+
+.submit-button {
+  display: block;
+  margin: 2rem auto;
+  background-color: #0d47a1;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #1565c0;
+}
+
+.results {
+  margin-top: 3rem;
+}
+
+.results-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #263238;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.no-results {
+  color: #757575;
+  text-align: center;
+}
+
+.results-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1.25rem;
 }
 
-.App-link {
-  color: #61dafb;
+.result-card {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.2s ease, background 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.result-card:hover {
+  background: #e3f2fd;
+  transform: scale(1.01);
+}
+
+.result-title {
+  font-size: 1.25rem;
+  color: #0d47a1;
+  margin-bottom: 0.3rem;
+}
+
+.result-score {
+  font-size: 0.95rem;
+  color: #444;
 }
