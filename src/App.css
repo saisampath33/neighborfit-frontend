@@ -1,72 +1,92 @@
 /* App.css */
+
 body {
   margin: 0;
+  padding: 0;
   font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(to right, #f8fafc, #e0f7fa);
+  background: linear-gradient(to right, #e3f2fd, #fce4ec);
+  min-height: 100vh;
   color: #333;
+  scroll-behavior: smooth;
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1000px;
   margin: auto;
-  padding: 2rem;
+  padding: 2rem 1rem;
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .main-title {
-  font-size: 2.5rem;
-  color: #0d47a1;
-  font-weight: 700;
-  margin-bottom: 2rem;
+  font-size: 2.8rem;
   text-align: center;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #0d47a1;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .sliders {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
-  margin-bottom: 2rem;
 }
 
 .slider-wrapper {
-  background: white;
-  padding: 1rem;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid #e0e0e0;
+  transition: transform 0.2s ease;
+}
+
+.slider-wrapper:hover {
+  transform: translateY(-4px);
 }
 
 .slider-label {
-  display: block;
-  font-weight: bold;
+  font-weight: 600;
   text-transform: capitalize;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
+  display: block;
+  color: #263238;
 }
 
 .slider {
   width: 100%;
+  accent-color: #1976d2;
 }
 
 .slider-value {
-  font-size: 0.9rem;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
   color: #777;
-  margin-top: 0.25rem;
 }
 
 .submit-button {
-  display: block;
   margin: 2rem auto;
-  background-color: #0d47a1;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  display: block;
+  background-color: #1976d2;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.75rem 2rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 50px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(25, 118, 210, 0.3);
 }
 
 .submit-button:hover {
-  background-color: #1565c0;
+  background-color: #0d47a1;
+  transform: scale(1.03);
 }
 
 .results {
@@ -74,44 +94,47 @@ body {
 }
 
 .results-title {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  color: #37474f;
   font-weight: 600;
-  color: #263238;
-  margin-bottom: 1rem;
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .no-results {
-  color: #757575;
+  color: #616161;
   text-align: center;
+  font-size: 1rem;
 }
 
 .results-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
 .result-card {
-  background: white;
-  border: 1px solid #ccc;
-  padding: 1rem;
-  border-radius: 10px;
-  transition: transform 0.2s ease, background 0.3s ease;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border-left: 5px solid #1976d2;
 }
 
 .result-card:hover {
   background: #e3f2fd;
-  transform: scale(1.01);
+  transform: scale(1.02);
 }
 
 .result-title {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   color: #0d47a1;
-  margin-bottom: 0.3rem;
+  font-weight: 700;
 }
 
 .result-score {
   font-size: 0.95rem;
-  color: #444;
+  color: #555;
+  margin-top: 0.3rem;
 }
